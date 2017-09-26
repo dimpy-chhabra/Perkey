@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.dimpy.perkey_dos.list_frag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="List Fragment!~"
+        style="@style/textViewLarge"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="30sp" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv1"
+        android:orientation="vertical"
+        android:id="@+id/list"
+        android:drawSelectorOnTop="true"/>
+
+</LinearLayout>
