@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">perkey_dos</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Where we at</string>
+
+    <string name="google_android_map_api_key">AIzaSyCrqkUiTsOV7Ph3EBWCSB_E43a5FHib4q4</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

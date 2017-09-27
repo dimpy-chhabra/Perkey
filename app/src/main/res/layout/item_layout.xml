@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="110sp"
+    android:padding="3sp"
+    android:background="@color/colorAccentTrancy">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0sp"
+        android:layout_marginLeft="6sp"
+        android:layout_height="100sp"
+        android:layout_weight="0.75"
+        android:background="@color/colorAccentTrancy">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="0.40"
+            android:textStyle="bold"
+            android:padding="6sp"
+            android:text="Ambience Mall"
+            android:id="@+id/textView_Mall"
+            android:textColor="@color/colorWhite"
+            style="@style/textViewLarge"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="0.25"
+            android:padding="3sp"
+            android:text="Gurgaon, NCR, Delhi, India"
+            android:id="@+id/textView_Adress"
+            android:textStyle="italic"
+            android:textColor="@color/colorWhite"
+            style="@style/textViewMedium"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="0.25"
+            android:padding="3sp"
+            android:text="2 Hours"
+            android:id="@+id/textView_Duration"
+            style="@style/textViewMedium"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="textStart" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_weight="0.25"
+            android:padding="3sp"
+            android:text="Rs. 70"
+            android:id="@+id/textView_Cost"
+            style="@style/textViewMedium"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="textStart" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="0sp"
+        android:src="@drawable/selectcity"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent"
+        android:layout_weight="0.25" />
+</LinearLayout>
