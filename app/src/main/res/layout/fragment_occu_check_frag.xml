@@ -1,56 +1,179 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.dimpy.perkey_dos.occu_check_frag">
+    android:layout_height="match_parent">
 
-    <TextView
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:id="@+id/adressTextView"
-        android:layout_height="wrap_content"
-        android:text="Here shall be the adress of the parking slot"
-        style="@style/textViewLarge" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.dimpy.perkey_dos.occu_check_frag">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Here shall be the adress of the parking slot"
-        style="@style/textViewMedium" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180sp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/parking" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="fare formula description"
-        style="@style/textViewLarge" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Entry time : "
-        style="@style/textViewMedium" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Park it!"
-        style="@style/textViewLarge"
-        android:background="@drawable/ripple_effect"
-        android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:textSize="40sp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Cancel"
-        android:fontFamily="monospace"
-        style="@style/textViewLarge"
-        android:background="@drawable/ripple_effect"
-        android:textColor="@color/colorAccent" />
+            <ImageView
+                android:id="@+id/ivContactItem2"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/iconp" />
 
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/adressTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_toEndOf="@id/ivContactItem2"
+                android:layout_toRightOf="@id/ivContactItem2"
+                android:text="Here shall be the adress of the parking slot"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/entryTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/adressTextView"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/ivContactItem2"
+                android:layout_toRightOf="@id/ivContactItem2"
+                android:text="UK03 HE92 9823"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272" />
+            <!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_1"
+                android:layout_below="@id/entryTimeTextView"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_toEndOf="@id/ivContactItem2"
+                android:layout_toRightOf="@id/ivContactItem2"
+                android:text="Premium USER!"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272" /> -->
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <ImageView
+                android:id="@+id/ivContactItem1"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_whatshot_black_24dp" />
+
+            <TextView
+                android:id="@+id/chargesTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_toEndOf="@id/ivContactItem1"
+                android:layout_toRightOf="@id/ivContactItem1"
+                android:text="fare formula description"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#212121" />
+
+            <TextView
+                android:id="@+id/chargesHourlyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chargesTextView"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@id/ivContactItem1"
+                android:layout_toRightOf="@id/ivContactItem1"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="UK03 HE92 9823"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="#727272" />
+
+
+        </RelativeLayout>
+        <!--<TextView
+            android:id="@+id/adressTextView"
+            style="@style/textViewLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="monospace"
+            android:text="Here shall be the adress of the parking slot" />
+
+        <TextView
+            android:id="@+id/entryTimeTextView"
+            style="@style/textViewMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Here shall be the adress of the parking slot" />
+
+        <TextView
+            android:id="@+id/chargesTextView"
+            style="@style/textViewLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorAccent"
+            android:text="fare formula description" />
+
+        <TextView
+            android:id="@+id/chargesHourlyTextView"
+            style="@style/textViewMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Entry time : " /> -->
+
+        <Button
+            android:id="@+id/button_Parkit"
+            style="@style/textViewLarge"
+            android:layout_width="250sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:drawableRight="@drawable/ic_check_circle_black_24dp"
+            android:padding="6sp"
+            android:text="Park it!"
+            android:textColor="@color/colorPrimaryDark_dark"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_Cancelit"
+            style="@style/textViewMedium"
+            android:layout_width="250sp"
+            android:layout_height="40sp"
+            android:drawableRight="@drawable/ic_adb_black_24dp"
+            android:padding="6sp"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent" />
+
+    </LinearLayout>
+</ScrollView>

@@ -3,15 +3,15 @@
     android:shape="oval">
     <solid android:color="@color/colorAccentTrancy" />
     <stroke
-        android:width="10dip"
+        android:width="20dip"
         android:color="@color/colorPrimaryDarkTrancy" />
     <corners android:radius="100dip" />
     <size
         android:width="120dp"
         android:height="120dp" />
     <padding
+        android:bottom="1dip"
         android:left="1dip"
-        android:top="1dip"
         android:right="1dip"
-        android:bottom="1dip" />
+        android:top="1dip" />
 </shape>

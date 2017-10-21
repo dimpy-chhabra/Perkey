@@ -3,14 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.dimpy.perkey_dos.scanner_frag">
+    <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perkey!"
+            android:padding="16sp"
+            android:gravity="center"
+            android:shadowColor="@color/colorHoloText"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:background="@drawable/shape_1"
+            android:textStyle="bold"
+            android:textColor="@color/colorHoloText"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+    -->
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:padding="16sp"
+        android:text="Tap the Circle below to scan the Parking QR Code and Perkey with us!"
+        android:textStyle="italic" />
 
     <ImageButton
+        android:id="@+id/scan_button"
         android:layout_width="200sp"
         android:layout_height="200sp"
         android:layout_centerInParent="true"
-        android:src="@drawable/shape"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="centerCrop"
-        android:id="@+id/scan_button" />
+        android:shadowColor="@color/colorHoloText"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:src="@drawable/shape" />
 
 </RelativeLayout>

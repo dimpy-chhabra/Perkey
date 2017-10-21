@@ -1,14 +1,19 @@
 package com.example.dimpy.perkey_dos;
 
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
 
 /**
  * Created by dimpy on 27/9/17.
@@ -43,9 +48,37 @@ public class list_item_adapter extends ArrayAdapter<List_Item_Location_History> 
         TextView pricetag = (TextView) listItemView.findViewById(R.id.textView_Duration);
         pricetag.setText(loc.getDuration());
 
-        TextView pricetag1 = (TextView) listItemView.findViewById(R.id.textView_Cost);
-        pricetag1.setText("Rs. " + loc.getCost());
+        //TextView pricetag1 = (TextView) listItemView.findViewById(R.id.textView_Cost);
+        //pricetag1.setText("Rs. " + loc.getCost());
 
+        String cost_ = loc.getCost();
+
+        final TextView shape_money = (TextView) listItemView.findViewById(R.id.shape_money);
+        shape_money.setText("Rs." + cost_);
+
+        GradientDrawable priceCircle = (GradientDrawable) shape_money.getBackground();
+        int priceColor = 0;
+
+        if (Integer.parseInt(cost_) > 50 && Integer.parseInt(cost_) < 100)
+            priceColor = ContextCompat.getColor(getContext(), R.color.colorDarkest);
+            //shape_money.setBackgroundResource(R.color.colorDarkest);
+        else if (Integer.parseInt(cost_) < 50)
+            priceColor = ContextCompat.getColor(getContext(), R.color.colorDark);
+            /// /shape_money.setBackgroundResource(R.color.colorDark);
+        else
+            priceColor = ContextCompat.getColor(getContext(), R.color.colorLight);
+        //shape_money.setBackgroundResource(R.color.colorLight);
+
+        priceCircle.setColor(priceColor);
+
+        android.os.Handler handler = new android.os.Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                shape_money.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.left_enter));
+            }
+        }, 200);
+        shape_money.startAnimation(AnimationUtils.loadAnimation(getContext(), R.anim.left_out));
 
         return listItemView;
     }

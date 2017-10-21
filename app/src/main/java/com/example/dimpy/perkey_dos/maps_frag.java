@@ -2,18 +2,24 @@ package com.example.dimpy.perkey_dos;
 
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.location.Location;
 import android.os.Bundle;
+import android.provider.SyncStateContract;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.android.gms.maps.CameraUpdate;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.maps.android.ui.IconGenerator;
 
@@ -109,12 +115,39 @@ public class maps_frag extends Fragment implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mGoogleMap = googleMap;
 
-        ArrayList<LatLng> lats = new ArrayList<>();
-        lats.add(new LatLng(24.5432, 74.3927));
-        lats.add(new LatLng(21.5432, 74.9927));
 
-        addMarker(lats.get(0), "Lala Land ", 3);
-        addMarker(lats.get(1), "Yaba Land ", 7);
+        CameraUpdate cameraUpdate = CameraUpdateFactory.newLatLngZoom(new LatLng(28.5200, 77.0964), 10);
+        mGoogleMap.animateCamera(cameraUpdate);
+
+        ArrayList<LatLng> lats = new ArrayList<>();
+        lats.add(new LatLng(28.5434, 77.1568));
+        lats.add(new LatLng(28.5054, 77.0964));
+        lats.add(new LatLng(28.5286, 77.2193));
+        lats.add(new LatLng(28.5794, 77.0561));
+
+        mGoogleMap.addMarker(new MarkerOptions()
+                .position(lats.get(0))
+                .title("DLF Emporio")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
+                .snippet("PSpots = 50"));
+
+        mGoogleMap.addMarker(new MarkerOptions()
+                .position(lats.get(1))
+                .title("Ambience Island")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .snippet("PSpots = 30"));
+
+        mGoogleMap.addMarker(new MarkerOptions()
+                .position(lats.get(2))
+                .title("Select CityWalk")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ROSE))
+                .snippet("PSpots = 27"));
+
+        mGoogleMap.addMarker(new MarkerOptions()
+                .position(lats.get(3))
+                .title("Pinnacle Mall")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW))
+                .snippet("PSpots = 40"));
 
     }
 }

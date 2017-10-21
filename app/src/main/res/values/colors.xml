@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#00c4ff</color>
-    <color name="colorPrimaryDark">#1d85c6</color>
+    <color name="colorPrimary">#78c0d7</color>
+    <color name="colorPrimaryDark">#388a9f</color>
     <color name="colorPrimaryDarkTrancy">#b51d85c6</color>
     <color name="primaryLight">#FFF9C4</color>
+    <color name="colorIcons">#212121</color>
+    <color name="colorDivider">#BDBDBD</color>
     <color name="colorAccent">#607D8B</color>
     <color name="colorAccentTrancy">#a8607d8b</color>
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
-    <color name="colorHoloText">#757575</color>
-    <color name="colorIcons">#212121</color>
-    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorDarkest">#275297</color>
+    <color name="colorDark">#277997</color>
+    <color name="colorLight">#2fa196</color>
+    <color name="colorHoloText">#919191</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorPrimary_dark">#545758</color>
+    <color name="colorPrimaryDark_dark">#4a4e4e</color>
+    <color name="colorAccent_dark">#202020</color>
+    <!--
+        <color name="colorHoloText">#919191</color>
+        <color name="colorWhite">#FFFFFF</color>
+
+            <color name="colorDarkest">#508124</color>
+            <color name="colorDark">#81da33</color>
+            <color name="colorLight">#91e220</color>
+            <color name="colorPrimary">#8BC34A</color>
+            <color name="colorPrimaryDark">#689F38</color>
+            <color name="colorPrimaryDarkTrancy">#a9689f38</color>
+            <color name="primaryLight">#DCEDC8</color>
+            <color name="colorAccent">#9E9E9E</color>
+            <color name="colorAccentTrancy">#a8607d8b</color>
+            <color name="colorPrimaryText">#689F38</color>
+            <color name="colorSecondaryText">#757575</color>
+            <color name="colorIcons">#212121</color>
+            <color name="colorDivider">#BDBDBD</color> -->
 </resources>

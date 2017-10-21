@@ -8,12 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AlternativeTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary_dark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark_dark</item>
+        <item name="colorAccent">@color/colorAccent_dark</item>
+    </style>
+
     <style name="textViewLarge" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:padding">16dp</item>
-        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Large</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Medium</item>
         <item name="android:textColor">@color/colorPrimaryText</item>
-        <item name="android:fontFamily">cursive</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_gravity">center</item>
     </style>
@@ -25,14 +31,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
     <style name="textViewMedium" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:textSize">15dp</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Medium</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Small</item>
         <item name="android:textColor">@color/colorSecondaryText</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_gravity">center</item>
     </style>
+
 
 </resources>
