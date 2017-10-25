@@ -45,6 +45,7 @@ public class scanner_frag2 extends Fragment {
     StringRequest stringRequest;
     ProgressDialog progressDialog;
     FragmentManager fragmentManager;
+    SharedPreferences pref;
     FloatingActionButton floatingActionButton;
     TextView textView_Adress, textView_Information, textView_EntryTime;
     private String mParam1;
@@ -89,7 +90,7 @@ public class scanner_frag2 extends Fragment {
         fragmentManager = getActivity().getSupportFragmentManager();
 
         Log.e(" in SCANNER FRAG 2 ", " ON CREATE VIEW");
-        SharedPreferences pref = getActivity().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        pref = getActivity().getSharedPreferences("MyPref", 0); // 0 - for private mode
         Boolean animate = pref.getBoolean("animate_bit", false);
 
 
@@ -172,9 +173,10 @@ public class scanner_frag2 extends Fragment {
 
                 SharedPreferences pref = getActivity().getSharedPreferences("MyPref", 0); // 0 - for private mode
                 String usr = pref.getString("phone", "0000000000");
-
+                String trans = String.valueOf(trans_id);
                 params.put("park_id", mParam1);
                 params.put("usr_id", usr);
+                params.put("trans_id", trans);
 
                 return params;
             }
@@ -188,15 +190,15 @@ public class scanner_frag2 extends Fragment {
     private void wannaExit(View view) {
 
         new AlertDialog.Builder(view.getContext())
-                .setTitle("Lets Exit? ")
-                .setMessage("Generate Bill")
+                .setTitle("Let's Exit")
+                .setMessage("Your generated bill is of " + fare + ". Click on exit to continue.")
                 .setPositiveButton("EXIT!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         progressDialog = new ProgressDialog(getActivity());
                         progressDialog.setMessage("Exit process Initiated");
                         progressDialog.show();
 
-                        Toast.makeText(getActivity(), "ok bye!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(), "ok bye! OnLine Payment Platform coming soon!!", Toast.LENGTH_SHORT).show();
                         volleyToExitAndBill();
                     }
                 })
@@ -233,7 +235,6 @@ public class scanner_frag2 extends Fragment {
                             .replace(R.id.content,
                                     new scanner_frag(),
                                     "scanner_frag").commit();
-
 
                 } else {
                     Log.e("in scanner_frag2 ", " volleyToExitAndBill " + response);

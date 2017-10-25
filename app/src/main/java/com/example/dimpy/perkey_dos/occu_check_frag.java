@@ -196,6 +196,11 @@ public class occu_check_frag extends Fragment {
                 } else {
                     Log.e("in occu_check_frag ", " for response is null :>" + response);
                     Toast.makeText(getContext(), "Please Try again Later after you have parked your car", Toast.LENGTH_LONG).show();
+                    fragmentManager
+                            .beginTransaction()
+                            .replace(R.id.content,
+                                    new scanner_frag(),
+                                    "scanner_frag").commit();
                 }
             }
         },

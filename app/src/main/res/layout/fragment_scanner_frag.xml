@@ -27,7 +27,7 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:padding="16sp"
-        android:text="Tap the Circle below to scan the Parking QR Code and Perkey with us!"
+        android:text="Tap the Circle above to scan the Parking QR Code and Perkey with us!"
         android:textStyle="italic" />
 
     <ImageButton
