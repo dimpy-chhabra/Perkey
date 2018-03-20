@@ -1,14 +1,29 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
     tools:context="com.example.dimpy.perkey_dos.maps_frag">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <!--<TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Maps Fragment"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        android:layout_height="wrap_content"
+        android:text="Where all we at?!"
+        style="@style/textViewLarge"
+        android:padding="16sp"
+        android:gravity="center"
+        android:shadowColor="@color/colorHoloText"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="2"
+        android:background="@drawable/shape_1"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+-->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/tripMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</FrameLayout>
+</LinearLayout>
